@@ -5,11 +5,16 @@ import sponsorshipSVG from "../../../assets/icons/sponsorship.svg";
 import cancelSVG from "../../../assets/icons/cancel.svg";
 import {theme} from "../../../styles/theme.styled";
 import {IconButtonMolecule} from "../../molecules/IconButtonMolecule/IconButton.molecule";
+import {useDispatch, useSelector} from "react-redux";
+import {RootState} from "../../../store/store";
+import {setToggle} from "../../../store/toggle.slice";
 
 
 export const MainModalLayout = () => {
 
-    const showModal = true;
+    // const showModal = true;
+    const showModal = useSelector((state: RootState) => state.toggle.value)
+    const dispatch = useDispatch()
 
     return (
         <>
@@ -25,6 +30,7 @@ export const MainModalLayout = () => {
                                 backgroundColor='transparent'
                                 borderColor={theme.TOKENS.T2.i000}
                                 color='white'
+                                // onClick={() => dispatch(setToggle(false))}
                             />
                             <IconButtonMolecule
                                 iconWidth='1.8rem'

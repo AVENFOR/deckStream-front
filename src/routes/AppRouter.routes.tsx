@@ -3,6 +3,7 @@ import {HomePage} from "../pages/Home.page";
 import {HeaderLayout} from "../components/layouts/HeaderLayout/Header.layout";
 import {UserPage} from "../pages/User.page";
 import {WelcomePage} from "../pages/Welcome.page";
+import {PlayerPage} from "../pages/Player.page";
 
 export const AppRouter = () => {
     return (
@@ -12,6 +13,7 @@ export const AppRouter = () => {
                 <Route path="/" element={<HomePage/>}/>
                 <Route path="/user" element={<UserPage/>}/>
                 <Route path="/welcome" element={<WelcomePage/>}/>
+                <Route path="/player" element={<PlayerPage/>}/>
             </Routes>
         </>
     )
