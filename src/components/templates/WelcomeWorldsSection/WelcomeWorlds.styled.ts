@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
-export const WelcomeMainSectionWrapper = styled.section`
-  display: flex;
+export const WelcomeWorldsWrapper = styled.section`
   width: 100%;
+  display: flex;
   justify-content: center;
   align-items: center;
-  padding: 15rem 3rem;
+  gap: 6rem;
 `;

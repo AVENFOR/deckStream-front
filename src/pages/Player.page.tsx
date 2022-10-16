@@ -3,7 +3,6 @@ import { Player } from '@livepeer/react';
 // import posterIMG from '../assets/img/imageBG.jpeg';
 
 const playbackId =
-    // 'bafybeida3w2w7fch2fy6rfvfttqamlcyxgd3ddbf4u25n7fxzvyvcaegxy';
     'cf6alj50bi2ra0zq';
 
 import blenderPoster from '../assets/img/imageBG.jpeg';

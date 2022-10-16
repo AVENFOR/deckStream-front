@@ -1,9 +1,8 @@
 import styled from "styled-components";
 
-export const WelcomeMainSectionWrapper = styled.section`
+export const ProjectsMainWrapper = styled.main`
   display: flex;
-  width: 100%;
   justify-content: center;
   align-items: center;
-  padding: 15rem 3rem;
+  gap: 6rem;
 `;

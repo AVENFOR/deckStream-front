@@ -1,10 +1,10 @@
 import { IconWrapper } from "./Icon.styled";
 
 interface Props {
-  src?: string;
+  src: string;
   propsClass?: string;
-  height?: string;
-  width?: string;
+  height: string;
+  width: string;
   alt?: string;
   rounded?: boolean;
   onclick?: () => void;

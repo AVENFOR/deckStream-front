@@ -1,8 +1,11 @@
+import {WelcomeMainSection} from "../components/templates/WelcomeMainSection/WelcomeMain.section";
+import {WelcomeWorldsSection} from "../components/templates/WelcomeWorldsSection/WelcomeWorlds.section";
 
 export const WelcomePage = () => {
     return (
         <>
-            <h1>Welcome</h1>
+            <WelcomeMainSection/>
+            <WelcomeWorldsSection/>
         </>
     )
 }
