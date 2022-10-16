@@ -1,5 +1,6 @@
 import {useAccount} from "@web3modal/react";
 import {useNavigate} from "react-router-dom";
+import {HomeMainSection} from "../components/templates/HomeMainSection/HomeMain.section";
 
 export const HomePage = () => {
 
@@ -14,7 +15,7 @@ export const HomePage = () => {
 
     return (
         <>
-            <h1>Home</h1>
+            <HomeMainSection/>
         </>
     )
 }
