@@ -8,12 +8,13 @@ import {IconButtonMolecule} from "../../molecules/IconButtonMolecule/IconButton.
 import {useDispatch, useSelector} from "react-redux";
 import {RootState} from "../../../store/store";
 import {setToggle} from "../../../store/toggle.slice";
+import {UserBalanceMolecule} from "../../molecules/UserBalanceMolecule/UserBalance.molecule";
 
 
 export const MainModalLayout = () => {
 
     // const showModal = true;
-    const showModal = useSelector((state: RootState) => state.toggle.value)
+    const showModal: boolean = useSelector((state: RootState) => state.toggle.value)
     const dispatch = useDispatch()
 
     return (
@@ -22,6 +23,7 @@ export const MainModalLayout = () => {
                 <MainModalWrapper>
                     <MainModalContentWrapper>
                         <h2>Become a sponsor</h2>
+                        <UserBalanceMolecule/>
                         <MainModalButtonsWrapper>
                             <IconButtonMolecule
                                 iconWidth='1.8rem'
@@ -30,7 +32,7 @@ export const MainModalLayout = () => {
                                 backgroundColor='transparent'
                                 borderColor={theme.TOKENS.T2.i000}
                                 color='white'
-                                // onClick={() => dispatch(setToggle(false))}
+                                onClick={() => dispatch(setToggle(false))}
                             />
                             <IconButtonMolecule
                                 iconWidth='1.8rem'

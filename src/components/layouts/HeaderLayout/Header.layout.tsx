@@ -43,7 +43,9 @@ export const HeaderLayout = () => {
 
     return (
         <HeaderWrapper>
-            <IconWrapper>
+            <IconWrapper
+                onClick={() => navigate("/")}
+            >
                 <IconAtom
                     src={logo}
                     alt='logo'
