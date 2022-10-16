@@ -19,13 +19,17 @@ export const UserCardIsLive = styled.div`
   position: absolute;
   width: 42px;
   height: 23px;
-  left: 32px;
+  left: 1.2rem;
   top: 45px;
   background: #FF0000;
   border-radius: 50px;
   color: white;
   font-weight: bold;
   font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
 `;
 
 export const UserCardInfo = styled.div`

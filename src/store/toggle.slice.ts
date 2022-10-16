@@ -1,18 +1,19 @@
 import {createSlice, PayloadAction} from '@reduxjs/toolkit'
+import {RootState} from "./store";
 
 export interface toggleState {
     value: boolean
 }
 
-const initialState: toggleState = {
+const initialState = {
     value: false,
-}
+} as toggleState
 
 export const toggleSlice = createSlice({
     name: 'toggle',
     initialState,
     reducers: {
-        setToggle: (state, action: PayloadAction<number>) => {
+        setToggle: (state, action: PayloadAction<boolean>) => {
             state.value = action.payload
         },
     },
@@ -20,6 +21,6 @@ export const toggleSlice = createSlice({
 
 export const {setToggle} = toggleSlice.actions
 
-export const select = (state) => state.toggle.value
+export const selectToggle = (state: RootState) => state.toggle.value
 
 export default toggleSlice.reducer
