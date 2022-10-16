@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 interface SDGProps {
     isAbsolute?: boolean;
+    bgColor?: string;
 }
 
 export const SDGWrapper = styled.div<SDGProps>`
@@ -16,7 +17,7 @@ export const SDGWrapper = styled.div<SDGProps>`
   width: 83px;
   height: 93px;
 
-  background: #FF0000;
+  background: ${({bgColor}) => bgColor};
   border-radius: 0 1.8rem;
 
   /* Inside auto layout */

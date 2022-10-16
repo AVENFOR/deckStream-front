@@ -14,6 +14,8 @@ export const ProjectsMainSection = () => {
                 profileSRC={avatar}
                 projectUserName='Eydrent'
                 totalFollowers='1.5K'
+                bgColor='red'
+                onClick={() => console.log('clicked')}
             />
         </ProjectsMainWrapper>
     )

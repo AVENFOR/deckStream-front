@@ -2,6 +2,7 @@ import {UserCardAvatar, UserCardFollowers, UserCardInfo, UserCardIsLive, UserCar
 import IconAtom from "../../atoms/IconAtom/Icon.atom";
 
 import followersICON from '../../../assets/icons/wallet.svg'
+import AvatarAtom from "../../atoms/AvatarAtom/Avatar.atom";
 
 interface UserCardOrganismI {
     profileSRC: string;
@@ -17,7 +18,7 @@ export const UserCardOrganism = (props: UserCardOrganismI) => {
     return (
         <UserCardWrapper>
             <UserCardAvatar>
-                <IconAtom
+                <AvatarAtom
                     height='6.5rem'
                     src={profileSRC}
                     width='6.5rem'
