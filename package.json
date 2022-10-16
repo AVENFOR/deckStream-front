@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@hop-protocol/sdk": "^0.0.1-beta.384",
     "@livepeer/react": "^1.0.6",
     "@reduxjs/toolkit": "^1.8.6",
     "@types/styled-components": "^5.1.26",

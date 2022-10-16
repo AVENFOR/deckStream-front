@@ -12,11 +12,12 @@ interface ProjectCardOrganismI {
     totalFollowers: string;
     bgColor: string;
     onClick: () => void;
+    isLive?: boolean;
 }
 
 export const ProjectCardOrganism = (props: ProjectCardOrganismI) => {
 
-    const {projectTitle, sdgTitle, sdgSRC, profileSRC, projectUserName, totalFollowers, bgColor, onClick} = props;
+    const {projectTitle, sdgTitle, sdgSRC, profileSRC, projectUserName, totalFollowers, bgColor, onClick, isLive = false} = props;
 
     return (
         <ProjectCardWrapper
@@ -31,6 +32,7 @@ export const ProjectCardOrganism = (props: ProjectCardOrganismI) => {
                 <h3>{projectTitle}</h3>
             </ProjectCardTitle>
             <UserCardOrganism
+                isLive={isLive}
                 profileSRC={profileSRC}
                 projectUserName={projectUserName}
                 totalFollowers={totalFollowers}
