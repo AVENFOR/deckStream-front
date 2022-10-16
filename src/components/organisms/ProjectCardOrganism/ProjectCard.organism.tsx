@@ -10,17 +10,22 @@ interface ProjectCardOrganismI {
     profileSRC: string;
     projectUserName: string;
     totalFollowers: string;
+    bgColor: string;
+    onClick: () => void;
 }
 
 export const ProjectCardOrganism = (props: ProjectCardOrganismI) => {
 
-    const {projectTitle, sdgTitle, sdgSRC, profileSRC, projectUserName, totalFollowers} = props;
+    const {projectTitle, sdgTitle, sdgSRC, profileSRC, projectUserName, totalFollowers, bgColor, onClick} = props;
 
     return (
-        <ProjectCardWrapper>
+        <ProjectCardWrapper
+            onClick={onClick}
+        >
             <SDGMolecule
                 sdgTitle={sdgTitle}
                 src={sdgSRC}
+                bgColor={bgColor}
             />
             <ProjectCardTitle>
                 <h3>{projectTitle}</h3>
