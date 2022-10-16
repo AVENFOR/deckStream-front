@@ -9,7 +9,7 @@ import logoutSVG from '../../../assets/icons/logout.svg'
 import {useAccount, useConnectModal} from '@web3modal/react'
 import {useDisconnect} from '@web3modal/react'
 
-import { useNavigate } from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 import {SpanAtom} from "../../atoms/SpanAtom/Span.atom";
 import {theme} from "../../../styles/theme.styled";
 
@@ -36,6 +36,11 @@ export const HeaderLayout = () => {
     //     navigate("/");
     // }
 
+    // if (!isConnected) {
+    //
+    //     navigate("/");
+    // }
+
     return (
         <HeaderWrapper>
             <IconWrapper>
@@ -47,8 +52,8 @@ export const HeaderLayout = () => {
                 <h2>
                     Deck
                     <SpanAtom
-                     color={theme.TOKENS.S1.i400}
-                     text={'Stream'}
+                        color={theme.TOKENS.S1.i400}
+                        text={'Stream'}
                     />
                 </h2>
             </IconWrapper>
