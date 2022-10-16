@@ -10,11 +10,12 @@ import {useAccount, useConnectModal} from '@web3modal/react'
 import {useDisconnect} from '@web3modal/react'
 
 import { useNavigate } from "react-router-dom";
+import {SpanAtom} from "../../atoms/SpanAtom/Span.atom";
+import {theme} from "../../../styles/theme.styled";
 
 export const HeaderLayout = () => {
 
     const {isOpen, open, close} = useConnectModal()
-
     const {address, isConnected} = useAccount()
     const result = address.slice(-5);
 
@@ -24,10 +25,16 @@ export const HeaderLayout = () => {
 
     function* generator() {
         yield disconnect();
-        yield navigate("/home");
+        yield navigate("/");
     }
 
     const gen = generator();
+
+    // if (isConnected) {
+    //     navigate("/home");
+    // } else {
+    //     navigate("/");
+    // }
 
     return (
         <HeaderWrapper>
@@ -37,7 +44,13 @@ export const HeaderLayout = () => {
                     alt='logo'
                     width={'2.853rem'}
                 />
-                <h2>DeckStream</h2>
+                <h2>
+                    Deck
+                    <SpanAtom
+                     color={theme.TOKENS.S1.i400}
+                     text={'Stream'}
+                    />
+                </h2>
             </IconWrapper>
             {isConnected &&
                 <HeaderAdressWrapper>
@@ -55,8 +68,10 @@ export const HeaderLayout = () => {
                     iconWidth='1.8rem'
                     src={walletSVG}
                     iconText='Connect'
-                    backgroundColor={'#322DC1'}
-                    borderColor={'#322DC1'}
+                    // backgroundColor={'#322DC1'}
+                    backgroundColor={theme.TOKENS.S3.i900}
+                    // borderColor={'#322DC1'}
+                    borderColor={theme.TOKENS.S3.i900}
                     color='white'
                     onClick={open}
                 />

@@ -7,7 +7,7 @@ import {config} from "../configs/walletConnect.config";
 import {Web3Modal} from '@web3modal/react'
 // import {ConnectButton, useConnectModal} from '@web3modal/react'
 import {AppRouter} from "./routes/AppRouter.routes";
-import {HeaderLayout} from "./components/layouts/HeaderLayout/Header.layout";
+import {MainModalLayout} from "./components/layouts/MainModalLayout/MainModal.layout";
 
 
 function App() {
@@ -17,8 +17,8 @@ function App() {
         <>
             <ThemeProvider theme={theme}>
                 <GlobalStyles/>
+                <MainModalLayout/>
                 <AppRouter/>
-                <HeaderLayout/>
                 {/*<ConnectButton/>*/}
             </ThemeProvider>
             <Web3Modal config={config}/>

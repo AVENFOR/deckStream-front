@@ -1,6 +1,13 @@
 import {createGlobalStyle} from "styled-components";
+import {theme} from "./theme.styled";
 
 // import Jost from '../assets/fonts/Jost-VariableFont_wght.ttf';
+
+type GlobalStylesProps = {
+    theme: {
+        TOKENS: theme.TOKENS,
+    };
+};
 
 export const GlobalStyles = createGlobalStyle`
 
@@ -24,12 +31,14 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    font-size: 1.6rem;
+    //font-size: 1.6rem;
+    font-size: 1.8rem;
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     color: white;
-    background-color: #170F34;
+    background-color: ${({theme}) => theme.TOKENS.P1.i1000};
+    padding: 0 5%;
   }
 
   img, picture, video, canvas, svg {
@@ -51,7 +60,7 @@ export const GlobalStyles = createGlobalStyle`
 
   button {
     cursor: pointer;
-    font-size: 1.6rem;
+    font-size: 1.8rem;
   }
 
   a {

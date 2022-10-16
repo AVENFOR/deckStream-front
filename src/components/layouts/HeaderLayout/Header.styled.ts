@@ -5,7 +5,7 @@ export const HeaderWrapper = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 3rem 10%;
+  padding: 3rem 0;
 `;
 
 export const IconWrapper = styled.div`
