@@ -1,10 +1,18 @@
 import {Route, Routes} from "react-router-dom";
 import {HomePage} from "../pages/Home.page";
+import {HeaderLayout} from "../components/layouts/HeaderLayout/Header.layout";
+import {UserPage} from "../pages/User.page";
+import {WelcomePage} from "../pages/Welcome.page";
 
 export const AppRouter = () => {
     return (
-        <Routes>
-            <Route path="/hi" element={<HomePage/>}/>
-        </Routes>
+        <>
+            <HeaderLayout/>
+            <Routes>
+                <Route path="/" element={<HomePage/>}/>
+                <Route path="/user" element={<UserPage/>}/>
+                <Route path="/welcome" element={<WelcomePage/>}/>
+            </Routes>
+        </>
     )
 }
